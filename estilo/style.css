@@ -28,7 +28,7 @@
 }
 
 body{
-    background-color: var(--cor1);
+    background-image: linear-gradient(200deg, var(--cor5), #83e1ad, var(--cor5));
     font-family: var(--fonte-padrao);
  }
 
