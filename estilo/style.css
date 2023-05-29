@@ -32,12 +32,25 @@ body{
     font-family: var(--fonte-padrao);
  }
 
+ .overlay {
+   display: block;
+   filter: opacity(100%);
+ }
+
  header{
     background-image: linear-gradient(var(--cor3), var(--cor5));
     text-align: center;
     padding: 40px 10px 0px 10px;
     min-height: 150px;
     box-shadow: -1px 3px 9px rgba(0, 0, 0, 0.462);
+ }
+
+ header img {
+   display: none;
+   width: 30px;
+   position: absolute;
+   left: 10px;
+   top: 10px;
  }
 
  header > h1{
@@ -56,14 +69,18 @@ body{
     margin: auto;
 }
 
-nav{
+.side-bar{
+   display: none;
+}
+
+.nav-geral{
     text-align: left;  
     margin-top: 70px;
     height: 50px;
     font-size: 1.2em;
  }
 
- nav > a{
+ .nav-geral > a{
     color: white;
     font-weight: bold;
     font-size: 0.9em;
@@ -73,7 +90,7 @@ nav{
     display: inline-block;
  }
 
- nav > a:hover{
+ .nav-geral > a:hover{
     background-color: var(--cor2);
     border-radius: 5px;
     display: inline-block;
@@ -211,4 +228,28 @@ nav{
 
  footer > a:hover{
     color: var(--cor4);
+ }
+ 
+ @media screen and (max-width: 820px) {
+   .overlay {
+      display: block;
+      filter: brightness(50%);
+   }
+
+   header {
+      padding-bottom: 30px;
+   }
+   
+   header .nav-geral {
+      display: none;
+   }
+
+   .side-bar {
+      display: flex;
+      flex-direction: column;
+   }
+
+   header img {
+      display: block;
+   }
  }
